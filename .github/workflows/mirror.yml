@@ -1,0 +1,22 @@
+name: Mirror to public repo
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout with full history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Push mirror
+        run: |
+          git remote add public https://x-access-token:${MIRROR_TOKEN}@github.com/BRc4rlos/csw2026-2.git
+          git push public --mirror
+        env:
+          MIRROR_TOKEN: ${{ secrets.CSW2026 }}
