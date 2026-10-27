@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 1) favicon -->
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <!-- 2) título da página -->
+    <title>Aula Imagens</title>
+</head>
+<body>
+    <!-- 3) título do conteúdo -->
+    <h1>Desafio das Imagens</h1>
+    <!-- 4) subtítulo com o nome da cidade -->
+    <h2>Vila Velha - ES</h2>
+
+    <!-- 5) imagem da cidade -->
+    <img src="img/cidade.jpg" alt="Convento da Penha no alto do morro, em Vila Velha" width="400">
+
+    <!-- 6) imagem com legenda -->
+    <figure>
+        <img src="img/cidade-legenda.jpg" alt="Convento da Penha visto do Morro do Moreno" width="400">
+        <figcaption>Convento da Penha visto do Morro do Moreno, um dos cartões-postais de Vila Velha.</figcaption>
+    </figure>
+
+    <!-- 7) imagem que muda quando a tela tiver até 760px -->
+    <picture>
+        <source srcset="img/paisagem-pequena.jpg" media="(max-width: 760px)">
+        <source srcset="img/paisagem-grande.jpg" media="(min-width: 761px)">
+        <img src="img/paisagem-grande.jpg" alt="Vista panorâmica do Morro do Moreno com o Convento da Penha ao fundo" width="600">
+    </picture>
+
+    <h3>Créditos das imagens</h3>
+    <ul>
+        <li>"<a href="https://commons.wikimedia.org/wiki/File:Convento_da_Penha_-_Vila_Velha_-_panoramio.jpg">Convento da Penha - Vila Velha</a>"
+            por MarcoXavier2005, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>, via Wikimedia Commons.</li>
+        <li>"<a href="https://commons.wikimedia.org/wiki/File:Convento_da_Penha_avistado_do_Morro_do_Moreno_na_pr%C3%A1tica_de_rap%C3%A9l.jpg">Convento da Penha avistado do Morro do Moreno</a>"
+            por Sanada92, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons.</li>
+        <li>"<a href="https://commons.wikimedia.org/wiki/File:Vista_panor%C3%A2mica_do_Morro_do_Moreno,_ao_fundo_o_Monumento_Hist%C3%B3rio_Convento_da_Penha.jpg">Vista panorâmica do Morro do Moreno</a>"
+            por Sanada92, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons.</li>
+    </ul>
+</body>
+</html>

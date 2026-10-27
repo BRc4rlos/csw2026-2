@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal da Faculdade - Desafio das Tabelas</title>
+</head>
+<body>
+    <!-- A. Tabela-mestra: 3 linhas (cabeçalho, corpo, rodapé) -->
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tbody>
+            <!-- B. Cabeçalho + menu -->
+            <tr>
+                <td colspan="2" id="inicio">
+                    <table width="100%" height="60" border="0" cellpadding="10" cellspacing="0" bgcolor="#bfdbfe">
+                        <tr>
+                            <td width="70%"><h1>Portal da Faculdade — 3º Semestre</h1></td>
+                            <td width="30%" align="right">
+                                <table border="1" cellpadding="4" cellspacing="0" bgcolor="#ffffff" width="200">
+                                    <tr><td>buscar...</td></tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <table width="100%" height="30" border="0" cellpadding="5" cellspacing="0" bgcolor="#cbd5e1">
+                        <tr>
+                            <td align="center"><a href="#inicio">Início</a></td>
+                            <td align="center"><a href="#cursos">Cursos</a></td>
+                            <td align="center"><a href="#grade">Grade de Horários</a></td>
+                            <td align="center"><a href="#contato">Contato</a></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <!-- C/D. Corpo: coluna principal (~65%) e lateral (~35%) -->
+            <tr>
+                <td width="65%" valign="top">
+                    <table width="100%" border="0" cellpadding="10" cellspacing="0">
+                        <tr><td id="cursos"><h2>Notícias</h2></td></tr>
+
+                        <!-- Cartão 1 -->
+                        <tr>
+                            <td>
+                                <table width="100%" border="1" cellpadding="8" cellspacing="0">
+                                    <tr>
+                                        <td width="120" height="80" bgcolor="#94a3b8" align="center">IMAGEM</td>
+                                        <td valign="top">
+                                            <table width="100%" border="0" cellpadding="2" cellspacing="0">
+                                                <tr><td><b>Inscrições abertas para monitoria</b></td></tr>
+                                                <tr><td>Alunos do 3º semestre podem se inscrever até o fim do mês.</td></tr>
+                                                <tr><td><a href="#cursos">leia mais</a></td></tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+
+                        <!-- Cartão 2 -->
+                        <tr>
+                            <td>
+                                <table width="100%" border="1" cellpadding="8" cellspacing="0">
+                                    <tr>
+                                        <td width="120" height="80" bgcolor="#94a3b8" align="center">IMAGEM</td>
+                                        <td valign="top">
+                                            <table width="100%" border="0" cellpadding="2" cellspacing="0">
+                                                <tr><td><b>Semana de Tecnologia</b></td></tr>
+                                                <tr><td>Palestras e oficinas de desenvolvimento web no auditório.</td></tr>
+                                                <tr><td><a href="#cursos">leia mais</a></td></tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+
+                        <!-- Cartão 3 -->
+                        <tr>
+                            <td>
+                                <table width="100%" border="1" cellpadding="8" cellspacing="0">
+                                    <tr>
+                                        <td width="120" height="80" bgcolor="#94a3b8" align="center">IMAGEM</td>
+                                        <td valign="top">
+                                            <table width="100%" border="0" cellpadding="2" cellspacing="0">
+                                                <tr><td><b>Novo laboratório de informática</b></td></tr>
+                                                <tr><td>O laboratório 3 recebeu 40 computadores novos.</td></tr>
+                                                <tr><td><a href="#cursos">leia mais</a></td></tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+
+                        <!-- E. Grade de horários (tabela de dados) -->
+                        <tr>
+                            <td id="grade">
+                                <table width="100%" border="1" cellpadding="6" cellspacing="0">
+                                    <caption><b>Grade de horários — 3º semestre</b></caption>
+                                    <thead>
+                                        <tr bgcolor="#e2e8f0">
+                                            <th scope="col" id="hora">Horário</th>
+                                            <th scope="col" id="seg">Segunda</th>
+                                            <th scope="col" id="ter">Terça</th>
+                                            <th scope="col" id="qua">Quarta</th>
+                                            <th scope="col" id="qui">Quinta</th>
+                                            <th scope="col" id="sex">Sexta</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row" id="h0730">07:30 – 09:10</th>
+                                            <td>Programação Web I (teoria)</td>
+                                            <td>Banco de Dados (teoria)</td>
+                                            <td>Programação Web I (laboratório)</td>
+                                            <td rowspan="2" headers="qui h0730 h0930">Projeto Integrador (orientação)</td>
+                                            <td>UX e Interface</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" id="h0930">09:30 – 11:10</th>
+                                            <td colspan="2" headers="seg ter h0930">Seminários de Pesquisa</td>
+                                            <td headers="qua h0930">Engenharia de Software</td>
+                                            <td headers="sex h0930">Tópicos Especiais em Front-end</td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="6">Aulas geminadas indicam atividades em laboratório.</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="6">Carga horária total: 400 horas no semestre.</td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+
+                <!-- D. Coluna lateral -->
+                <td width="35%" valign="top" bgcolor="#f1f5f9">
+                    <table width="100%" border="0" cellpadding="10" cellspacing="0">
+                        <tr>
+                            <td>
+                                <h3>Destaques</h3>
+                                <table width="100%" border="1" cellpadding="4" cellspacing="0">
+                                    <tr><td>Resultado das provas do 1º bimestre</td></tr>
+                                    <tr><td>Calendário de rematrícula</td></tr>
+                                    <tr><td>Edital de iniciação científica</td></tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table width="100%" border="1" cellpadding="4" cellspacing="0">
+                                    <caption><b>Agenda</b></caption>
+                                    <tr><th colspan="2" scope="colgroup">Outubro</th></tr>
+                                    <tr><th scope="col">Data</th><th scope="col">Evento</th></tr>
+                                    <tr><td>05/10</td><td>Início das provas</td></tr>
+                                    <tr><td>15/10</td><td>Dia do Professor</td></tr>
+                                    <tr><td>23/10</td><td>Reposição de aula</td></tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h3>Links úteis</h3>
+                                <table width="100%" border="1" cellpadding="4" cellspacing="0">
+                                    <tr><td><a href="#inicio">Voltar ao início</a></td></tr>
+                                    <tr><td><a href="#grade">Grade de horários</a></td></tr>
+                                    <tr><td><a href="#contato">Contato</a></td></tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <!-- F. Rodapé: 3 colunas, 100% da tabela-mestra -->
+            <tr>
+                <td colspan="2" id="contato">
+                    <table width="100%" border="0" cellpadding="10" cellspacing="0" bgcolor="#e2e8f0">
+                        <tr>
+                            <td width="33%" valign="top"><b>Sobre o portal</b><br>Projeto acadêmico de layout com tabelas.</td>
+                            <td width="33%" valign="top"><b>Contato</b><br><a href="#contato">contato@portal.exemplo</a></td>
+                            <td width="34%" valign="top"><b>Redes sociais</b><br>
+                                <a href="#contato">Instagram</a> |
+                                <a href="#contato">LinkedIn</a> |
+                                <a href="#contato">YouTube</a></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

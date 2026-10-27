@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 13 - Fontes baixadas</title>
+    <style>
+        /* Os arquivos .ttf/.otf foram baixados do dafont.com e ficam na pasta fontes/ */
+        @font-face {
+            font-family: 'Top Secret';
+            src: url('fontes/TopSecret.otf') format('opentype');
+        }
+
+        @font-face {
+            font-family: 'Gimme Danger';
+            src: url('fontes/GimmeDanger.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'LL Cooper';
+            src: url('fontes/LLCooper.ttf') format('truetype');
+        }
+
+        body {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1 {
+            font-family: 'Top Secret', 'Courier New', monospace;
+            font-size: 3em;
+        }
+
+        h2 {
+            font-family: 'Gimme Danger', Impact, sans-serif;
+        }
+
+        p {
+            font-family: 'LL Cooper', Georgia, serif;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fontes baixadas</h1>
+    <h2>Usando @font-face</h2>
+    <p>As fontes Top Secret, Gimme Danger e LL Cooper foram baixadas e são carregadas da pasta local
+       com a regra @font-face. Se o arquivo não existir, o navegador usa a fonte genérica do final da lista.</p>
+    <p><a href="google-fonts.html">&lt;&lt; Ver o site com Google Fonts</a></p>
+</body>
+</html>
